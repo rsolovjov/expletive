@@ -52,7 +52,7 @@ defmodule Expletive.Configuration do
   def build_pattern([]), do: "$." # will never match
   def build_pattern(words) do
     words
-    |> Enum.map(&Regex.escape/1)
+    #|> Enum.map(&Regex.escape/1)
     |> Enum.join("|")
     |> wrap_string("\\b(?:", ")\\b")
   end
